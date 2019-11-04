@@ -3,10 +3,10 @@
   heavily based on Conor McBride's [[https://github.com/pigworker/CS410-17][CS410-17]] and [[https://github.com/pigworker/CS410-18][CS410-18]] classes with some parts taken from the other places
 
 * Installation
-  Follow the instructions in the [[https://github.com/yanok/agda-zrh/README.pigworker.md][Original Readme]]
+  Follow the instructions in the [[https://github.com/yanok/agda-zrh/blob/master/README.pigworker.md][Original Readme]]
 
 * Key bindings for Emacs
-  [[https://github.com/pigworker/CS410-17/lectures/cheat-sheet.txt][Cheat sheet]]
+  [[https://github.com/pigworker/CS410-17/blob/master/lectures/cheat-sheet.txt][Cheat sheet]]
 
   
 ** Troubles with some key bindings on Chromebooks
@@ -14,7 +14,24 @@
    TODO: Add elisp snippet.
 
 
-* Agenda
+* Meetings agenda
   
-** Oct 31
-   We watched the first video in the class
+** Oct 31, Programs and Proofs
+   We watched [[https://www.youtube.com/watch?v=O4oczQry9Jw][the first video]] in the class
+
+*** Logic and functional programming is the same thing actually! (Curry-Howard isomorphism)
+    Slogan: Types are propositions and terms are proofs
+
+*** Some basic data types and their logic interpretation
+    
+**** Empty type =Zero= is logical False
+     =Void= in Haskell, though Haskell is a bit flowed here
+
+**** Record =One= with no fields is logical True
+     =()= (Unit) in Haskell
+
+**** Sum type =_+_= is logical or
+     =Either= is Haskell
+
+**** Product type =_*_= is logical and
+     =(,)= (pair) in Haskell

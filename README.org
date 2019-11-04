@@ -1,0 +1,20 @@
+
+* Agda class in ZRH
+  heavily based on Conor McBride's [[https://github.com/pigworker/CS410-17][CS410-17]] and [[https://github.com/pigworker/CS410-18][CS410-18]] classes with some parts taken from the other places
+
+* Installation
+  Follow the instructions in the [[https://github.com/yanok/agda-zrh/README.pigworker.md][Original Readme]]
+
+* Key bindings for Emacs
+  [[https://github.com/pigworker/CS410-17/lectures/cheat-sheet.txt][Cheat sheet]]
+
+  
+** Troubles with some key bindings on Chromebooks
+   Some key bindings, most notably C-SPC and C-, and not working on Chromebooks, you might want to remap them to something different.
+   TODO: Add elisp snippet.
+
+
+* Agenda
+  
+** Oct 31
+   We watched the first video in the class

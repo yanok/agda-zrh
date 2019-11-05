@@ -35,3 +35,13 @@
 
 **** Product type =_*_= is logical and
      =(,)= (pair) in Haskell
+
+** Nov 7, More Programs and Proofs
+   Please watch [[https://www.youtube.com/watch?v=qcVZxQTouDk][the second video]]
+
+   Also please try to do [[https://github.com/yanok/agda-zrh/blob/master/Exercise/Zero.agda][the zeroth exercise]], I think the most interesting WRT to the first lecture is the 1.2 part, especially 1.2.4 and 1.2.5.
+
+*** Things to discuss about the first lecture
+    - So far we haven't introduced anything that goes beyond Haskell, does this mean Haskell embeds a logic too?
+    - What kind of logic is it?
+    - In what sense terms are proofs?

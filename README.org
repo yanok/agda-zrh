@@ -43,5 +43,40 @@
 
 *** Things to discuss about the first lecture
     - So far we haven't introduced anything that goes beyond Haskell, does this mean Haskell embeds a logic too?
-    - What kind of logic is it?
+    - What kind of logic is it? Can we prove =P + Not P=?
     - In what sense terms are proofs?
+    - Why do we call them =+= and =*=, algebra of types.
+    - Implicit arguments are just a convenience.
+  
+*** Second lecture topics
+
+**** More basic proving
+
+**** Implicit arguments
+
+**** =Zero= type eliminator
+
+**** Natural numbers
+
+**** Term normalization
+
+**** Equality type
+
+**** Pattern-matching on evidence, =with=
+
+**** Computing types, "greater or equal" defined by recursion
+
+**** Dependent pair type =Sg=
+     It's logical interpretation is existential quantification.
+
+*** Topics to discuss
+    
+**** Equality
+     - Why do we need to think about equality? Do we need it if we don't care about proofs?
+     - Definitional vs propositional equality
+     - What does propositional equality give us? Looks like it just repeats definitional one
+     - Extensionality
+     - Can there be other equalities?
+
+**** Recursive vs inductive proposition definition
+

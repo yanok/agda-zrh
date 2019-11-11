@@ -47,20 +47,26 @@ update name v env x with compare name x
 update name v env x | inl _ = just v
 update name v env x | inr _ = env x
 
+delete : Name -> Env -> Env
+delete name env x with compare name x
+delete name env x | inl _ = nothing
+delete name env x | inr _ = env x
+
 eval : (fuel : Nat) -> Env -> LC -> Maybe LC
-eval zero env x = nothing -- out of fuel
-eval (suc fuel) env (var x) with env x
-eval (suc fuel) env (var x) | nothing = just (var x)
+eval fuel env (var x) with env x
+eval fuel env (var x) | nothing = just (var x)
+eval zero env (var x) | just r = nothing
 eval (suc fuel) env (var x) | just r = eval fuel env r
-eval (suc fuel) env (f $ x) with eval fuel env f
+eval fuel env (f $ x) with eval fuel env f
+eval zero env (f $ x) | just (lam y b) = nothing
 eval (suc fuel) env (f $ x) | just (lam y b) = eval fuel (update y x env) b
-eval (suc fuel) env (f $ x) | just f' with eval fuel env x
-eval (suc fuel) env (f $ x) | just f' | nothing = nothing
-eval (suc fuel) env (f $ x) | just f' | just x' = just (f' $ x')
-eval (suc fuel) env (f $ x) | nothing = nothing
-eval (suc fuel) env (lam x b) with eval fuel (update x (var x) env) b
-eval (suc fuel) env (lam x b) | nothing = nothing
-eval (suc fuel) env (lam x b) | just b' = just (lam x b')
+eval fuel env (f $ x) | just f' with eval fuel env x
+eval fuel env (f $ x) | just f' | nothing = nothing
+eval fuel env (f $ x) | just f' | just x' = just (f' $ x')
+eval fuel env (f $ x) | nothing = nothing
+eval fuel env (lam x b) with eval fuel (delete x env) b
+eval fuel env (lam x b) | nothing = nothing
+eval fuel env (lam x b) | just b' = just (lam x b')
 
 -- predicate saying if given lambda term terminates
 Terminates : LC -> Set

@@ -162,3 +162,18 @@ hamlet = {!!}
 
 nnHamlet : {B : Set} -> Not (Not (B + Not B))
 nnHamlet = {!!}
+
+-- yanok: Additional recursive vs inductive definitions exercise
+-- Lib.Nat defines _<=_ relation as a recursive function with result in Set
+-- but it's more usual to define it inductively:
+
+data _<=I_ : Nat -> Nat -> Set where -- it's a binary relation on Nat
+  refl-<=I : (n : Nat) -> n <=I n -- every natural is less or equal to itself
+  suc-<=I : (n m : Nat) -> n <=I m -> n <=I suc m -- if n is less or equal than m, n is less or equal than suc m
+
+-- prove that these definitions are equivalent
+<=-imp-<=I : (n m : Nat) -> n <= m -> n <=I m
+<=-imp-<=I n m n<=m = {!!}
+
+<=I-imp-<= : (n m : Nat) -> n <=I m -> n <=I m
+<=I-imp-<= n m n<=Im = {!!}

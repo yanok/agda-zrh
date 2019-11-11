@@ -168,12 +168,31 @@ nnHamlet = {!!}
 -- but it's more usual to define it inductively:
 
 data _<=I_ : Nat -> Nat -> Set where -- it's a binary relation on Nat
-  refl-<=I : (n : Nat) -> n <=I n -- every natural is less or equal to itself
-  suc-<=I : (n m : Nat) -> n <=I m -> n <=I suc m -- if n is less or equal than m, n is less or equal than suc m
+  refl-<=I : {n : Nat} -> n <=I n -- every natural is less or equal to itself
+  <=I-suc : {n m : Nat} -> n <=I m -> n <=I suc m -- if n is less or equal than m, n is less or equal than suc m
 
 -- prove that these definitions are equivalent
+-- you will need some additional lemmas for things which are immediately obvious
+-- in one definition but need some effort in another
+
+-- Prove that inductive <=I definition allows suc'ing both sides
+-- What should we do induction on?
+suc-<=I : {n m : Nat} -> n <=I m -> suc n <=I suc m
+suc-<=I n<=m = {!!}
+
+-- Now show that <= implies <=I
 <=-imp-<=I : (n m : Nat) -> n <= m -> n <=I m
 <=-imp-<=I n m n<=m = {!!}
 
-<=I-imp-<= : (n m : Nat) -> n <=I m -> n <=I m
-<=I-imp-<= n m n<=Im = {!!}
+-- You might also want to prove some simple stuff about <=
+-- Show that it is reflexive
+refl-<= : (n : Nat) -> n <= n
+refl-<= n = {!!}
+
+-- And that suc'ing the bigger number is ok
+<=-suc : (n m : Nat) -> n <= m -> n <= suc m
+<=-suc n m n<=m = {!!}
+
+-- Now show that <=I implies <=
+<=I-imp-<= : {n m : Nat} -> n <=I m -> n <= m
+<=I-imp-<= n<=Im = {!!}

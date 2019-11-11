@@ -130,9 +130,6 @@ factor x = {!!}
 -- impossible, in which case you should comment it out and explain
 -- why it's impossible
 
-Not : Set -> Set
-Not X = X -> Zero
-
 deMorgan1 : {A B : Set} -> (Not A + Not B) -> Not (A * B)
 deMorgan1 x y = {!!}
 

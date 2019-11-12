@@ -37,6 +37,22 @@
      =(,)= (pair) in Haskell
 
 ** Nov 7, More Programs and Proofs
+   We haven't really done what I planned for this meeting, so I've moved the agenda to the next one.
+ 
+   I've talked a bit about Agda's syntax for the dependent function types, then the result type depends on the argument value:
+   #+begin_src agda
+   -- assume we have a type that is computed
+   T : Nat -> Set -- doesn't have to be Nat
+
+   dependentFun : (n : Nat) -> T n
+   #+end_src
+
+   Then we discussed a bit a comparison function for =Nat= with a richer type:
+   #+begin_src agda
+   decide-<= : (n m : Nat) -> n <= m + m <= n
+   #+end_src
+   
+** Nov 14, More Programs and Proofs again?
    Please watch [[https://www.youtube.com/watch?v=qcVZxQTouDk][the second video]]
 
    Also please try to do [[https://github.com/yanok/agda-zrh/blob/master/Exercise/Zero.agda][the zeroth exercise]], I think the most interesting WRT to the first lecture is the 1.2 part, especially 1.2.4 and 1.2.5.
@@ -79,4 +95,5 @@
      - Can there be other equalities?
 
 **** Recursive vs inductive proposition definition
+
 

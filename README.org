@@ -52,7 +52,8 @@
    decide-<= : (n m : Nat) -> n <= m + m <= n
    #+end_src
    
-** Nov 14, More Programs and Proofs again?
+** Nov 14, No meeting
+** Nov 21, More Programs and Proofs again?
    Please watch [[https://www.youtube.com/watch?v=qcVZxQTouDk][the second video]]
 
    Also please try to do [[https://github.com/yanok/agda-zrh/blob/master/Exercise/Zero.agda][the zeroth exercise]], I think the most interesting WRT to the first lecture is the 1.2 part, especially 1.2.4 and 1.2.5.
